@@ -1,0 +1,92 @@
+.CollectionBanners {
+  margin-top: 2rem;
+}
+.productsSection {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.product .body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.product .img {
+  position: relative;
+}
+.product .img .hoverImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+.product .img:hover .hoverImg {
+  visibility: visible;
+}
+.product .img button {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #f2f2f2;
+  height: 40px;
+  text-align: center;
+  font-size: 1.4rem;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.product .img .newTag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 3px 4px;
+  background-color: black;
+  color: white;
+  font-size: 1.1rem;
+}
+.product .img .saleTag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px;
+  background-color: black;
+  color: white;
+}
+.product .body .prodTitle {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.product .body .prodDes,
+.product .body .prodPrice {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.2rem;
+}
+
+@media (max-width: 727px) {
+  .productsSection {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.prodDesShort {
+  display: none;
+}
+@media (max-width: 572px) {
+  .prodDesLong{
+    display: none;
+  }
+  .prodDesShort{
+    display: block;
+  }
+  .productsSection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

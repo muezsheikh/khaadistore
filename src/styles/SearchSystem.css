@@ -1,0 +1,108 @@
+.searchIcon {
+  cursor: pointer;
+}
+.searchContainer {
+  position: absolute;
+  top: 88%;
+  right: 07%;
+}
+.searchContainer .searchInput input {
+  width: 400px;
+  height: 40px;
+  font-size: 1.5rem;
+  padding: 1rem;
+  border: none;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+.searchContainer .searchInput input:focus {
+  border: none;
+  outline: none;
+}
+.searchContainer {
+  transform: translateY(-10px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all.3s;
+}
+.searchContainer.activeSearchBar {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0px);
+}
+.searchProductsContainer {
+  background-color: white;
+  position: absolute;
+  top: 100%;
+  width: 200%;
+  right: 0;
+  /* box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); */
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.searchProducts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1rem;
+  gap: 1rem;
+  max-height: 600px; /* Set a maximum height for the container */
+  overflow-y: scroll; /* Enable vertical scrolling when content exceeds the height */
+}
+/* Style the scrollbar track */
+.searchProducts::-webkit-scrollbar {
+  width: 4px; /* Adjust the width as needed */
+}
+
+/* Style the scrollbar thumb (the draggable part) */
+.searchProducts::-webkit-scrollbar-thumb {
+  background-color: #141313;
+  border-radius: 6px; /* Round the corners of the thumb */
+}
+
+/* Style the scrollbar track (the area behind the thumb) */
+.searchProducts::-webkit-scrollbar-track {
+  background-color: #eee;
+}
+
+/* Style the scrollbar corner (between vertical and horizontal scrollbar) */
+.searchProducts::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+.noProdFound {
+  padding: 1rem;
+}
+.noProdFound p {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+.noProdFound p .enteredData {
+  font-weight: bold;
+}
+@media (max-width: 1134px) {
+  .searchProductsContainer {
+    width: 150%;
+  }
+  .searchProducts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 882px) {
+  .searchProductsContainer {
+    width: 100%;
+  }
+  .searchProducts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 527px) {
+  .searchContainer .searchInput input {
+    width: 300px;
+  }
+}
+@media (max-width: 355px) {
+  .searchContainer .searchInput input {
+    width: 200px;
+  }
+  .searchProducts {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,182 @@
+.mobNavModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  /* z-index: -1; */
+}
+
+.mobNavModal.activeMobNavModal {
+  visibility: visible;
+}
+
+.cartButtonModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s;
+}
+.cartButtonModal.activeModal {
+  visibility: visible;
+  opacity: 1;
+}
+.cartModalBox {
+  width: 500px;
+  background-color: white;
+  display: flex;
+  visibility: hidden;
+  transform: translateY(-15px);
+  transition: all 0.5s;
+}
+.cartModalBox.activeModal {
+  visibility: visible;
+  transform: translate(0px);
+}
+.cartModalBox .cartModalImg {
+  width: 30%;
+}
+.cartModalBox .cartModalContent {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.cartModalBox .cartModalContent .top {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem;
+}
+.cartModalBox .cartModalContent .top i {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.cartModalBox .cartModalContent .middle {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+.cartModalBox .cartModalContent .middle h3 {
+  font-size: 1.6rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+.cartModalBox .cartModalContent .middle p {
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+.cartModalBox .cartModalContent .bottom {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.cartModalBox .cartModalContent .bottom button {
+  background-color: black;
+  text-transform: uppercase;
+  color: white;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.cartModalBox .cartModalContent .bottom :nth-child(2) {
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+}
+.cartModalBox .cartModalContent .bottom :nth-child(2):hover {
+  background-color: black;
+  color: white;
+}
+.cartModalBox .cartModalContent .bottom :nth-child(1):hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+@media (max-width: 504px) {
+  .cartButtonModal .cartModalBox {
+    width: 90%;
+  }
+  .cartButtonModal .cartModalBox .cartModalImg {
+    width: 250px;
+  }
+  .cartButtonModal .cartModalBox .cartModalContent .middle {
+    /* background-color: red; */
+    padding: 1rem;
+  }
+  .cartButtonModal .cartModalBox .cartModalContent .middle p {
+    font-size: 1.3rem;
+  }
+  .cartButtonModal .cartModalBox .cartModalContent .bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cartButtonModal .cartModalBox .cartModalContent .bottom button {
+    width: 70%;
+  }
+}
+@media (max-width: 448px) {
+  .cartButtonModal .cartModalBox {
+    width: 90%;
+  }
+  .cartButtonModal .cartModalBox .cartModalImg {
+    width: 180px;
+  }
+  .cartButtonModal .cartModalBox .cartModalContent {
+    gap: 0;
+  }
+  .cartButtonModal .cartModalBox .cartModalContent .middle h3 {
+    font-size: 1.3rem;
+  }
+  .cartButtonModal .cartModalBox .cartModalContent .middle p {
+    font-size: 1.1rem;
+  }
+  .cartButtonModal .cartModalBox .cartModalContent .bottom {
+    gap: 0.5rem;
+  }
+  .cartButtonModal .cartModalBox .cartModalContent .bottom button {
+    width: 150px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 311px) {
+  .cartButtonModal .cartModalBox {
+    width: 100%;
+  }
+  .cartButtonModal .cartModalBox .cartModalContent .bottom button {
+    width: 120px;
+    font-size: 0.9rem;
+  }
+}
+.cartButtonModal .cartModalContent .middle .sizeBox {
+  margin-top: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.cartButtonModal .cartModalContent .middle .sizeBox > div {
+  display: flex;
+}
+.cartButtonModal .cartModalContent .middle .sizeBox > div p {
+  padding: 0.3rem 0.7rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.cartButtonModal .cartModalContent .middle .sizeBox > div .activeSize {
+  font-weight: bold;
+}

@@ -1,0 +1,126 @@
+@media (max-width: 909px) {
+  .topHeader {
+    display: none;
+  }
+  .barsIcon {
+    display: block;
+    font-size: 2.5rem;
+  }
+  .navLinks {
+    display: none;
+  }
+  .mobNavLinks {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background-color: white;
+    height: 100vh;
+    width: 80%;
+    overflow-y: scroll;
+    /* visibility: hidden; */
+    transition: all 0.5s;
+  }
+  .mobNavLinks.activeMobNav {
+    /* visibility: visible; */
+    left: 0;
+  }
+  .mobNavLinks .headerSection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.1rem;
+  }
+  .mobNavLinks .headerSection > div {
+    background-color: #f2f2f2;
+    height: 60px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    gap: 0.1rem;
+  }
+  .mobNavLinks .headerSection .activeTab {
+    background-color: white;
+  }
+  .mobNavLinks .contentSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .mobNavLinks .contentSection > div {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .mobNavLinks .contentSection > div .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-transform: uppercase;
+  }
+  .mobNavLinks .contentSection > div .head a {
+    color: black;
+  }
+  .mobNavLinks .contentSection > div .head p {
+    font-weight: 500;
+  }
+  .mobNavLinks .contentSection > div .head i {
+    font-size: 2rem;
+  }
+  .navbar .icons .truckIcon,
+  .navbar .icons .userIcon {
+    display: none;
+  }
+  .navbar .icons > div i {
+    font-size: 2rem;
+  }
+  .cartIcon .iconTitle,
+  .searchIcon .iconTitle {
+    display: none;
+  }
+  .mobNavLinks .contentSection > div .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease; /* Adjust the duration as needed */
+    margin-bottom: 1rem;
+  }
+  .mobNavLinks .contentSection > div .content > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-left: 2rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+  .mobNavLinks .contentSection > div .content ul li a {
+    color: black;
+  }
+
+  .mobNavLinks .contentSection > div > .content.activeTab {
+    max-height: 500px; /* Adjust the max-height as needed */
+  }
+  .linkHeading {
+    font-weight: 500;
+    font-size: 1.4rem;
+  }
+  .mobNavLinks .contentSection > .sameLink > .content > ul > li {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .mobNavLinks .contentSection > .sameLink > .content > ul > li > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-left: 1rem;
+  }
+  .mobNavLinks .contentSection > .sameLink > .content > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 605px) {
+  
+}

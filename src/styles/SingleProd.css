@@ -1,0 +1,329 @@
+.singleHeader .content {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1.4rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+.singleHeader .content a {
+  color: black;
+  text-transform: capitalize;
+}
+.singleHeader .content p {
+  font-weight: 600;
+}
+
+.singleProdContainer {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 47% 30%;
+  gap: 1rem;
+  margin-left: 1rem;
+}
+.singleProdContainer .singleProdImgsSide {
+  display: flex;
+  gap: 1rem;
+}
+.singleProdContainer .singleProdImgsSide .sideImages {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.singleProdContainer .singleProdImgsSide .sideImages > div {
+  width: 8rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.singleProdContainer .singleProdImgsSide .sideImages > div:hover {
+  border: 1px solid black;
+}
+.singleProdContainer .singleProdImgsSide .sideImages > .activeImage {
+  border: 1px solid black;
+}
+.singleProdContainer .singleProdContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.singleProdContainer .singleProdContent .first h3 {
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+.singleProdContainer .singleProdContent .first p {
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+}
+.singleProdContainer .singleProdContent .first :nth-child(3) {
+  color: rgba(0, 0, 0, 1);
+  font-weight: 400;
+}
+.singleProdContainer .singleProdContent .second {
+  font-size: 1.5rem;
+}
+.singleProdContainer .singleProdContent .second p {
+  color: rgba(0, 0, 0, 0.6);
+}
+.singleProdContainer .singleProdContent .second .inStock {
+  color: rgb(2, 165, 2);
+  font-weight: 600;
+}
+.singleProdContainer .singleProdContent .second .outStock {
+  columns: red;
+}
+.singleProdContainer .singleProdContent .third {
+  font-size: 1.5rem;
+}
+.singleProdContainer .singleProdContent .third .color p {
+  font-weight: 600;
+}
+.singleProdContainer .singleProdContent .third .colorBox {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+.singleProdContainer .singleProdContent .third .colorBox .colorNameTag {
+  position: absolute;
+  background-color: black;
+  color: white;
+  font-size: 1.1rem;
+  padding: 4px;
+  text-transform: capitalize;
+  top: -25px;
+  border-radius: 2px;
+  transform: translateY(5px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.singleProdContainer .singleProdContent .third .colorBox:hover .colorNameTag {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+.singleProdContainer .singleProdContent .third .colorBox > div {
+  width: 25px;
+  height: 25px;
+}
+.singleProdContainer .singleProdContent .third .size {
+  margin-top: 1rem;
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  justify-content: space-between;
+  width: 200px;
+}
+.singleProdContainer .singleProdContent .third .size > p {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.singleProdContainer .singleProdContent .third .sizeBox {
+  text-transform: uppercase;
+  width: 50%;
+}
+.singleProdContainer .singleProdContent .third .sizeBox p {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.singleProdContainer .singleProdContent .third .sizeBox .activeSize {
+  font-weight: 600;
+}
+
+.singleProdContainer .singleProdContent .fourth {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.5rem;
+  align-items: center;
+}
+.singleProdContainer .singleProdContent .fourth .quantityBox {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  width: 100px;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+}
+.singleProdContainer .singleProdContent .fourth .quantityBox .quantityNum {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+
+.singleProdContainer .singleProdContent .fourth .quantityBox i {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+}
+.singleProdContainer .singleProdContent .fourth .quantityBox i:hover {
+  transform: scale(1.3);
+}
+.singleProdContainer .singleProdContent .fourth .singleButton button {
+  width: 200px;
+  height: 40px;
+  font-size: 1.5rem;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.singleProdContainer .singleProdContent .fourth .singleButton button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+.singleProdContainer .singleProdContent .details {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+.singleProdContainer .singleProdContent .details .top {
+  display: flex;
+  gap: 5rem;
+}
+.singleProdContainer .singleProdContent .details h3 {
+  margin-bottom: 1rem;
+  position: relative;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.singleProdContainer .singleProdContent .details h3::after {
+  position: absolute;
+  content: '';
+  width: 70px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: -11px;
+  left: 0;
+}
+.singleProdContainer .singleProdContent .details .activeDetail {
+  color: black;
+}
+.singleProdContainer .singleProdContent .details .activeDetail::after {
+  background-color: black;
+}
+.singleProdContainer .singleProdContent .details .activeChart {
+  color: black;
+}
+.singleProdContainer .singleProdContent .details .activeChart::after {
+  background-color: black;
+}
+.singleProdContainer .singleProdContent .details .sizeChartHeading::after {
+  width: 100px;
+}
+.singleProdContainer .singleProdContent .details .detailContent {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media (max-width: 409px) {
+  .singleProdContainer .singleProdContent .details .detailContent {
+    width: 100%;
+  }
+}
+.singleProdContainer .singleProdContent .details .detailContent span {
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-right: 0.3rem;
+}
+
+.sizeChartBox {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  width: 400px;
+}
+
+.sizeChartBox .heading {
+  display: flex;
+}
+.sizeChartBox .heading p {
+  width: 100%;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(32, 31, 31);
+}
+.sizeChartBox .contentSection {
+  display: flex;
+  justify-content: space-between;
+}
+.sizeChartBox .contentSection > div {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-right: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.sizeChartBox .contentSection > div p {
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1144px) {
+  .singleProdContainer {
+    grid-template-columns: 50% 40%;
+  }
+  .singleProdContainer .singleProdImgsSide {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+  .singleProdContainer .singleProdImgsSide .sideImages {
+    display: flex;
+    flex-direction: row;
+  }
+  .sizeChartBox {
+    width: 300px;
+  }
+}
+
+@media (max-width: 833px) {
+  .singleProdContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .singleHeader {
+    display: none;
+  }
+  .sizeChartBox {
+    width: 100%;
+  }
+}
+
+@media (max-width: 325px) {
+  .fourth {
+    display: flex;
+    flex-direction: column;
+  }
+  .fourth > div {
+    width: 100%;
+  }
+}

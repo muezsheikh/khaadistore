@@ -1,0 +1,223 @@
+.topHeader {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #f1f1f1;
+  font-size: 1.2rem;
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 999;
+}
+.navbar .navbarContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3rem;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.navLinks > ul {
+  display: flex;
+  gap: 20px;
+}
+.navLinks > ul > li {
+  padding: 1rem;
+}
+/* yaha tk smjh ai ? g */
+.navLinks > ul > li > a {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: black;
+}
+
+.navbar .logo {
+  margin-left: 2rem;
+}
+
+.navbar .icons {
+  margin-right: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+.navbar .icons > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.navbar .icons > div i {
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.navbar .icons .cartIcon {
+  position: relative;
+  cursor: pointer;
+}
+.navbar .icons .cartIcon .emptyMsg {
+  position: absolute;
+  background-color: white;
+  color: black;
+  width: 100px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -80px;
+  top: 100%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.navbar .icons .cartIcon .emptyMsg.activeMsg {
+  visibility: visible;
+  opacity: 1;
+}
+.navbar .icons .cartIcon .cartListNum {
+  position: absolute;
+  top: -12px;
+  right: -8px;
+  background-color: brown;
+  padding: 1px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dropdown {
+  position: absolute;
+  display: flex;
+  background-color: #f2f2f2;
+  z-index: 99;
+  gap: 10px;
+  left: 25%;
+  top: 75%;
+  visibility: hidden;
+  padding: 1.5rem;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s;
+  transform: translateY(10px);
+  opacity: 0;
+  /* width: 50%; */
+  justify-content: space-between;
+}
+
+.navLinks ul li:hover > .dropdown {
+  visibility: visible;
+  transform: translateY(0);
+  opacity: 1;
+  background-color: #fff;
+}
+
+.dropdown li {
+  width: 220px;
+}
+.dropdown li a {
+  color: black;
+}
+.dropdown li h3 {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+}
+
+.fabrics > .dropdown > li,
+.readyToWear > .dropdown > li,
+.western > .dropdown > li {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.fabrics > .dropdown li a,
+.readyToWear > .dropdown li a,
+.western > .dropdown li a {
+  color: black;
+  font-size: 1.2rem;
+}
+.fabrics > .dropdown li h3,
+.readyToWear > .dropdown li h3,
+.western > .dropdown li h3 {
+  text-align: start;
+  font-size: 1.5rem;
+}
+.fabrics > .dropdown li ul,
+.readyToWear > .dropdown li ul,
+.western > .dropdown li ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.western > .dropdown {
+  left: 12%;
+  /* width: 80%; */
+}
+@media (max-width: 1374px) {
+  .western > .dropdown {
+    left: 5%;
+    width: 1200px;
+  }
+  .western > .dropdown > li {
+    width: 20%;
+  }
+}
+@media (max-width: 1266px) {
+  .western > .dropdown {
+    left: 5%;
+    top: 95%;
+    width: 1100px;
+  }
+}
+@media (max-width: 1208px) {
+  .western > .dropdown {
+    gap: 0;
+    justify-content: space-between;
+    width: 950px;
+    left: 10%;
+  }
+  .western > .dropdown > li {
+    width: 180px;
+  }
+}
+@media (max-width: 1058px) {
+  .western > .dropdown {
+    display: grid;
+    grid-template-columns: 20px 20px 20px 20px 200px;
+    left: 4%;
+    gap: 20px;
+    width: 90%;
+  }
+}
+@media (max-width: 1373px) {
+  .navbar .navLinks ul li > .sameDropdown {
+    left: 20%;
+  }
+}
+@media (max-width: 1114px) {
+  .navbar .navLinks ul li > .sameDropdown {
+    left: 15%;
+  }
+}
+@media (max-width: 964px) {
+  .navbar .navLinks ul li > .sameDropdown {
+    left: 12%;
+  }
+}
+
+.barsIcon {
+  display: none;
+}
+.mobNavLinks {
+  display: none;
+}
